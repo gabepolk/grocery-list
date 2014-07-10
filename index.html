@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Grocery List</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Grocery List</h1>
+<ul class="items-to-buy"></ul>
+
+<div id="templates">
+  <script type="text/template" class="item">
+  <li>
+    <div>
+      <input class="complete" type="checkbox" />
+      <h3>{{itemName}}</h5>
+      <p>{{description}}</p>
+    </div>
+  </li>
+  </script>
+
+  // <script type="text/template" class="new-todo">
+  // <h3>Create a new task</h3>
+  // <form class="new-todo-form">
+  //   Task Name:
+  //   <input class="task-name" type="text" />
+  //   </br>
+  //   Task Description:
+  //   <input class="task-description" type="text" />
+  //   </br>
+  //   <input class="submit-new-todo" type=submit />
+  // </form>
+  // </script>
+</div>
+
+<!-- 3rd-party scripts -->
+<script src="vendor/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="vendor/underscore.js" type="text/javascript"></script>
+<script src="vendor/backbone.js" type="text/javascript"></script>
+
+<!-- Globals -->
+<script src="src/util.js" type="text/javascript"></script>
+<!-- Models -->
+<script src="src/models/item.js" type="text/javascript"></script>
+<!-- Views -->
+<script src="src/views/item-list-view.js" type="text/javascript"></script>
+<!-- Main Entry -->
+<script src="src/main.js" type="text/javascript"></script>
+
+</body>
+</html>
