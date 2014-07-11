@@ -32,6 +32,18 @@ var ItemView = Backbone.View.extend({
     this.items = newItems;
     this.render();
   },
+  addItem: function(e){
+    e.preventDefault();
+    var name = $('.item-name').val();
+    var quantity = $('.item-quantity').val();
+    var newItem = new Item({
+      itemName: name,
+      description: quantity// add # of checkboxes depending on quantity #
+    })
+    this.items.push(newItem)
+    this.listenTo(newItem, 'change:complete', this.cleanPurchasedItems)
+    this.render();
+  },
   events: {
     'change .complete': 'markAsPurchased',
     'submit .new-item-form': 'addItem'
