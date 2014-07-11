@@ -12,9 +12,9 @@
   <script type="text/template" class="item">
   <li>
     <div>
-      <input class="complete" type="checkbox" />
       <h3>{{itemName}}</h5>
-      <p>{{description}}</p>
+      <!-- <p>{{description}}</p> -->
+      <input class="complete" type="checkbox" /> <!-- add checkbox for each item from quantity -->
     </div>
   </li>
   </script>
@@ -22,13 +22,13 @@
   <script type="text/template" class="new-item">
   <h3>Add a new item</h3>
   <form class="new-item-form">
-    Item Name:
+    Name:
     <input class="item-name" type="text" />
     </br>
-    Item Description:
-    <input class="item-description" type="text" />
+    Quantity:
+    <input class="item-quantity" type="text" />
     </br>
-    <input class="submit-new-item" type=submit />
+    <input class="submit-new-item" type=submit value="Add to List" />
   </form>
   </script>
 </div>
